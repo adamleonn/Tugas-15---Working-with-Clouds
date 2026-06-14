@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Scaling App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="left">
+        <p class="tag">Tugas 15 - Working with Clouds</p>
+
+        <h1>Cloud Scaling App</h1>
+
+        <p class="desc">
+          Aplikasi sederhana untuk menguji banyak request pada website cloud.
+        </p>
+
+        <div class="buttons">
+          <button id="btnStatus">Cek Server</button>
+          <button id="btnLoad" class="primary">Simulasi 50 Request</button>
+        </div>
+      </div>
+
+      <div class="right">
+        <div id="statusLight" class="light"></div>
+        <h2 id="statusText">Belum Dicek</h2>
+        <p id="instanceText">Instance: -</p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span>Total Request</span>
+        <strong id="totalRequests">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>Load Request</span>
+        <strong id="loadRequests">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>Durasi Test</span>
+        <strong id="durationText">0s</strong>
+      </div>
+
+      <div class="stat">
+        <span>Status Test</span>
+        <strong id="testStatus">Idle</strong>
+      </div>
+    </section>
+
+    <section class="architecture">
+      <h2>Arsitektur Cloud</h2>
+
+      <div class="flow">
+        <div>User</div>
+        <span>→</span>
+        <div>Azure App Service</div>
+        <span>→</span>
+        <div>Autoscale</div>
+        <span>→</span>
+        <div>Multiple Instance</div>
+      </div>
+    </section>
+
+    <section class="result">
+      <h2>Hasil Response</h2>
+      <pre id="output">Tekan tombol untuk menjalankan pengujian.</pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
